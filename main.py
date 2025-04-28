@@ -8,7 +8,7 @@ app.secret_key = os.environ.get('SECRET_KEY') or 'somethingsecret'
 # Discord app credentials
 CLIENT_ID = os.environ.get("DISCORD_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("DISCORD_CLIENT_SECRET")
-REDIRECT_URI = "https://randombot-vert.vercel.app"
+REDIRECT_URI = "https://randombot-vert.vercel.app/callback"
 OAUTH_SCOPE = "identify guilds"
 
 DISCORD_API_BASE = "https://discord.com/api"
