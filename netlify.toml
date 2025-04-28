@@ -1,7 +1,13 @@
 [build]
   command = "pip install -r requirements.txt && python main.py"
   publish = "/"
-  functions = "functions"
+  
+[build.environment]
+  FLASK_APP = "main.py"
+  FLASK_RUN_HOST = "0.0.0.0"
+  FLASK_RUN_PORT = "8080"
 
-[[plugins]]
-  package = "@netlify/plugin-python"
+[context.production.environment]
+  DISCORD_CLIENT_ID = "your_discord_client_id"
+  DISCORD_CLIENT_SECRET = "your_discord_client_secret"
+  SECRET_KEY = "your_flask_secret_key"
